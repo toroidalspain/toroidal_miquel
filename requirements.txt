@@ -1,0 +1,6 @@
+streamlit
+trimesh
+plotly
+numpy
+matplotlib
+

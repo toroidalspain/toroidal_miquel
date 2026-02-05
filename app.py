@@ -8,17 +8,17 @@ st.title("Generador de Pala 3D")
 # --- Sidebar amb tots els paràmetres ---
 st.sidebar.header("Paràmetres de la pala")
 
-scale_perfil = st.sidebar.number_input("Scale Perfil", min_value=0.01, value=1.0)
-m = st.sidebar.number_input("m", min_value=0.0, value=0.1)
-p = st.sidebar.number_input("p", min_value=0.0, value=0.4)
-t_max = st.sidebar.number_input("t_max", min_value=0.0, value=0.2)
-alpha = st.sidebar.number_input("alpha (graus)", min_value=0.0, max_value=90.0, value=5.0)
-prec_perfil = st.sidebar.number_input("prec_perfil", min_value=1, value=50)
+scale_perfil = st.sidebar.number_input("Longitud total del perfil NACA", min_value=0.01, value=1.0)
+m = st.sidebar.number_input("Camber màxim", min_value=0.0, value=0.1)
+p = st.sidebar.number_input("Posició del camber màxim", min_value=0.0, value=0.4)
+t_max = st.sidebar.number_input("Gruix màxim del perfil", min_value=0.0, value=0.2)
+alpha = st.sidebar.number_input("Angle d'atac (graus)", min_value=0.0, max_value=90.0, value=5.0)
+prec_perfil = st.sidebar.number_input("Precisió del perfil", min_value=1, value=50)
 x0 = st.sidebar.number_input("x0", value=0.0)
-x1 = st.sidebar.number_input("x1", value=1.0)
-x_max = st.sidebar.number_input("x_max", value=1.0)
-y_max = st.sidebar.number_input("y_max", value=0.5)
-prec_corba = st.sidebar.number_input("prec_corba", min_value=1, value=50)
+x1 = st.sidebar.number_input("Separació del punts d'unió amb el centre", value=1.0)
+x_max = st.sidebar.number_input("Posició separació màxim de la pala", value=1.0)
+y_max = st.sidebar.number_input("Separació màxima de la pala", value=0.5)
+prec_corba = st.sidebar.number_input("Precisió de la corba", min_value=1, value=50)
 
 # Botó per generar la pala
 if st.sidebar.button("Generar pala 3D"):
